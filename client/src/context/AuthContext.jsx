@@ -24,7 +24,9 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = async (email, password) => {
-    const res = await apiClient.post('/auth/login', { email, password });
+    const cleanEmail = String(email || '').trim().toLowerCase();
+    const cleanPass = String(password || '').trim();
+    const res = await apiClient.post('/auth/login', { email: cleanEmail, password: cleanPass });
     localStorage.setItem('gc_admin_token', res.data.token);
     localStorage.setItem('gc_admin', JSON.stringify(res.data.admin));
     setAdmin(res.data.admin);
