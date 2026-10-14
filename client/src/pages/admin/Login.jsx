@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Eye, EyeOff, Lock, Mail, AlertCircle, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Eye, EyeOff, Lock, Mail, AlertCircle } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import Logo from '../../components/Logo';
 
@@ -12,12 +12,6 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const { login } = useAuth();
   const navigate = useNavigate();
-
-  const handleAutoFill = () => {
-    setEmail('rahul@cleaning.com');
-    setPassword('rahul@2000');
-    setError('');
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -55,7 +49,7 @@ const Login = () => {
         <div className="text-center mb-6">
           <h1 className="text-2xl font-extrabold text-navy-950">Admin Sign In</h1>
           <p className="text-xs text-navy-800/60 mt-1">
-            Access lead management, services, SEO pages &amp; photo gallery
+            Sign in to access R M Home Cleaning administrative control
           </p>
         </div>
 
@@ -74,7 +68,7 @@ const Login = () => {
             </label>
             <input
               type="email"
-              placeholder="rahul@cleaning.com"
+              placeholder="name@domain.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -91,7 +85,7 @@ const Login = () => {
             <div className="relative">
               <input
                 type={showPassword ? 'text' : 'password'}
-                placeholder="Enter admin password"
+                placeholder="••••••••"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
@@ -114,33 +108,9 @@ const Login = () => {
             disabled={loading}
             className="btn-primary w-full !py-3 text-sm font-bold shadow-md shadow-skyline-600/30"
           >
-            {loading ? 'Authenticating...' : 'Sign In to Admin Portal'}
+            {loading ? 'Authenticating...' : 'Sign In'}
           </button>
         </form>
-
-        {/* 1-Click Auto Fill Assistant */}
-        <div className="mt-6 pt-5 border-t border-skyline-100/80">
-          <div className="p-3 bg-skyline-50/70 rounded-2xl border border-skyline-200/70 text-xs">
-            <div className="flex items-center justify-between mb-1.5">
-              <span className="font-bold text-navy-950 flex items-center gap-1">
-                <Sparkles size={13} className="text-skyline-600" /> Authorized Credentials
-              </span>
-              <button
-                type="button"
-                onClick={handleAutoFill}
-                className="text-[11px] font-bold text-skyline-700 hover:text-skyline-800 bg-white px-2.5 py-1 rounded-lg border border-skyline-200 shadow-2xs hover:bg-skyline-50 transition-colors"
-              >
-                1-Click Auto Fill
-              </button>
-            </div>
-            <p className="text-[11px] text-navy-800/70 font-mono">
-              Email: <span className="font-bold text-navy-950">rahul@cleaning.com</span>
-            </p>
-            <p className="text-[11px] text-navy-800/70 font-mono">
-              Pass: <span className="font-bold text-navy-950">rahul@2000</span>
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   );
