@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Backend API for R M Home Cleaning Service",
   "main": "server.js",
+  "license": "MIT",
   "type": "commonjs",
   "scripts": {
     "start": "node server.js",
