@@ -2,7 +2,7 @@
 # Push this repo to GitHub, then in Render: New -> Blueprint -> select repo.
 services:
   - type: web
-    name: glass-cleaning-api
+    name: rm-cleaning-api
     runtime: node
     rootDir: server
     plan: free

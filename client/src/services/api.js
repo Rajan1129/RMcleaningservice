@@ -2,13 +2,24 @@ import axios from 'axios';
 
 const getBaseUrl = () => {
   const envUrl = import.meta.env.VITE_API_URL;
+  if (envUrl && !envUrl.includes('localhost')) {
+    return envUrl;
+  }
   if (typeof window !== 'undefined') {
     const host = window.location.hostname;
-    if (envUrl && !envUrl.includes('localhost')) {
-      return envUrl;
+    const isLocal =
+      host === 'localhost' ||
+      host === '127.0.0.1' ||
+      host.startsWith('192.168.') ||
+      host.startsWith('10.') ||
+      host.endsWith('.local');
+
+    if (isLocal) {
+      return `http://${host}:5000/api`;
     }
-    // Adapt to whichever hostname (localhost or 192.168.x.x) the browser is visiting
-    return `http://${host}:5000/api`;
+
+    // On deployed production domain, use relative /api (or VITE_API_URL if configured)
+    return '/api';
   }
   return envUrl || 'http://localhost:5000/api';
 };

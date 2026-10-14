@@ -24,7 +24,8 @@ const Login = () => {
     } catch (err) {
       console.error('Login error details:', err);
       if (!err.response) {
-        setError('Cannot connect to backend server. Please verify your connection.');
+        const target = apiClient.defaults.baseURL || '/api';
+        setError(`Cannot reach API server at "${target}". If this is a deployed site, please configure VITE_API_URL in your hosting dashboard with your deployed backend URL.`);
       } else {
         setError(err.response?.data?.message || 'Invalid email or password. Please verify credentials.');
       }
