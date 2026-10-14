@@ -21,9 +21,6 @@ const Logo = ({ dark = false, size = 'default' }) => {
         <p className={`font-display font-extrabold text-base sm:text-lg tracking-tight ${dark ? 'text-white' : 'text-navy-950'}`}>
           R M Home Cleaning
         </p>
-        <p className={`text-[10px] sm:text-[11px] font-bold tracking-wider uppercase ${dark ? 'text-amber-300' : 'text-skyline-600'}`}>
-          House Cleaning · Sector 50, Chandigarh
-        </p>
       </div>
     </div>
   );
