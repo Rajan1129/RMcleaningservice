@@ -24,10 +24,13 @@ const Login = () => {
     } catch (err) {
       console.error('Login error details:', err);
       if (!err.response) {
-        const target = apiClient.defaults.baseURL || '/api';
-        setError(`Cannot reach API server at "${target}". If this is a deployed site, please configure VITE_API_URL in your hosting dashboard with your deployed backend URL.`);
+        setError('Cannot connect to backend server. Make sure the backend on Render is active.');
+      } else if (err.response.status === 404) {
+        setError('API route not found (404). Backend endpoint updated; please try again.');
+      } else if (err.response.status === 401) {
+        setError('Invalid email or password. Please verify your credentials.');
       } else {
-        setError(err.response?.data?.message || 'Invalid email or password. Please verify credentials.');
+        setError(err.response?.data?.message || 'Login failed. Please check credentials.');
       }
     } finally {
       setLoading(false);

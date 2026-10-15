@@ -1,10 +1,18 @@
 import axios from 'axios';
 
 const getBaseUrl = () => {
-  const envUrl = import.meta.env.VITE_API_URL;
-  if (envUrl && !envUrl.includes('localhost')) {
-    return envUrl;
+  let envUrl = import.meta.env.VITE_API_URL;
+  if (envUrl && typeof envUrl === 'string') {
+    envUrl = envUrl.trim().replace(/\/+$/, '');
+    if (!envUrl.includes('localhost')) {
+      // Auto-append /api if missing from configured backend URL
+      if (!envUrl.endsWith('/api')) {
+        envUrl = `${envUrl}/api`;
+      }
+      return envUrl;
+    }
   }
+
   if (typeof window !== 'undefined') {
     const host = window.location.hostname;
     const isLocal =
@@ -18,10 +26,11 @@ const getBaseUrl = () => {
       return `http://${host}:5000/api`;
     }
 
-    // On deployed production domain, use relative /api (or VITE_API_URL if configured)
-    return '/api';
+    // On production deployed domains (Vercel, Netlify, custom domain), use live Render backend
+    return 'https://rmcleaningservice.onrender.com/api';
   }
-  return envUrl || 'http://localhost:5000/api';
+
+  return envUrl || 'https://rmcleaningservice.onrender.com/api';
 };
 
 const apiClient = axios.create({

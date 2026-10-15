@@ -32,7 +32,7 @@ app.use(
 );
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || 'http://localhost:5173',
+    origin: true,
     credentials: true,
   })
 );
@@ -43,22 +43,22 @@ app.use(mongoSanitize());
 if (process.env.NODE_ENV !== 'test') app.use(morgan('dev'));
 
 // General API rate limiter
-const apiLimiter = rateLimit({ windowMs: 15 * 60 * 1000, max: 300 });
-app.use('/api', apiLimiter);
+const apiLimiter = rateLimit({ windowMs: 15 * 60 * 1000, max: 500 });
+app.use(['/api', '/'], apiLimiter);
 
 // Health check
-app.get('/api/health', (req, res) => res.json({ success: true, message: 'API is running' }));
+app.get(['/api/health', '/health'], (req, res) => res.json({ success: true, message: 'API is running' }));
 
-// Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/enquiries', enquiryRoutes);
-app.use('/api/services', serviceRoutes);
-app.use('/api/gallery', galleryRoutes);
-app.use('/api/faqs', faqRoutes);
-app.use('/api/business-info', businessInfoRoutes);
-app.use('/api/reviews', reviewRoutes);
-app.use('/api/locations', locationRoutes);
-app.use('/api/upload', uploadRoutes);
+// Routes (supports both /api/auth and /auth)
+app.use(['/api/auth', '/auth'], authRoutes);
+app.use(['/api/enquiries', '/enquiries'], enquiryRoutes);
+app.use(['/api/services', '/services'], serviceRoutes);
+app.use(['/api/gallery', '/gallery'], galleryRoutes);
+app.use(['/api/faqs', '/faqs'], faqRoutes);
+app.use(['/api/business-info', '/business-info'], businessInfoRoutes);
+app.use(['/api/reviews', '/reviews'], reviewRoutes);
+app.use(['/api/locations', '/locations'], locationRoutes);
+app.use(['/api/upload', '/upload'], uploadRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
