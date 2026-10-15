@@ -21,6 +21,18 @@ import { BUSINESS, whatsappLink } from '../utils/business';
 import ContactForm from '../components/ContactForm';
 import BeforeAfterSlider from '../components/BeforeAfterSlider';
 import CTASection from '../components/CTASection';
+import SEO from '../components/SEO';
+
+const nearbyLocations = [
+  { city: 'Mohali', slug: '/cleaning-service-in-mohali', desc: 'Phase 1-11, Aerocity & Sector 70-82' },
+  { city: 'Zirakpur', slug: '/cleaning-service-in-zirakpur', desc: 'VIP Road, Dhakoli, Baltana & High-Rises' },
+  { city: 'Panchkula', slug: '/cleaning-service-in-panchkula', desc: 'Sectors 1-28, MDC, Pinjore & Kalka' },
+  { city: 'Chandigarh', slug: '/cleaning-service-in-chandigarh', desc: 'Sector 50 & Sectors 1 to 60' },
+  { city: 'Tricity Hub', slug: '/cleaning-service-in-tricity', desc: 'All Tri-City Towns with 24/7 Dispatch' },
+  { city: 'Kharar', slug: '/cleaning-service-in-kharar', desc: 'Sunny Enclave, Gillco Valley & Landran' },
+  { city: 'SAS Nagar', slug: '/cleaning-service-in-sas-nagar', desc: 'Industrial Area & Corporate Hubs' },
+  { city: 'Near Me', slug: '/cleaning-service-near-me', desc: '45-60 Minute Doorstep Cleaner Arrival' },
+];
 
 const LocationLandingPage = ({ defaultSlug }) => {
   const { locationSlug } = useParams();
@@ -52,60 +64,6 @@ const LocationLandingPage = ({ defaultSlug }) => {
       });
   }, [activeSlug]);
 
-  useEffect(() => {
-    if (location?.metaTitle) {
-      document.title = location.metaTitle;
-    }
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc && location?.metaDescription) {
-      metaDesc.setAttribute('content', location.metaDescription);
-    }
-
-    // Schema.org LD+JSON
-    let scriptTag = document.getElementById('location-jsonld');
-    if (!scriptTag) {
-      scriptTag = document.createElement('script');
-      scriptTag.id = 'location-jsonld';
-      scriptTag.type = 'application/ld+json';
-      document.head.appendChild(scriptTag);
-    }
-
-    const jsonLd = {
-      '@context': 'https://schema.org',
-      '@type': 'LocalBusiness',
-      name: `R M Home Cleaning - ${location.city}`,
-      image: `https://sparkle-spark-homes.lovable.app${location.heroImage || '/images/hero-man-cleaning-window.jpg'}`,
-      telephone: `+91${BUSINESS.phone}`,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: BUSINESS.address,
-        addressLocality: location.city === 'Mohali' || location.city === 'SAS Nagar' ? 'Mohali' : 'Chandigarh',
-        addressRegion: 'Punjab & Chandigarh',
-        postalCode: '160047',
-        addressCountry: 'IN',
-      },
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '18',
-      },
-      areaServed: location.localities || [location.city],
-      openingHoursSpecification: {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '00:00',
-        closes: '23:59',
-      },
-    };
-
-    scriptTag.text = JSON.stringify(jsonLd);
-
-    return () => {
-      const el = document.getElementById('location-jsonld');
-      if (el) el.remove();
-    };
-  }, [location]);
-
   if (!location) {
     return (
       <div className="container-x py-20 text-center">
@@ -122,6 +80,20 @@ const LocationLandingPage = ({ defaultSlug }) => {
 
   return (
     <div>
+      <SEO
+        title={location.metaTitle || `Home Cleaning Service in ${location.city}`}
+        description={location.metaDescription}
+        canonical={location.slug ? `/${location.slug}` : `/${activeSlug}`}
+        image={location.heroImage}
+        city={location.city}
+        localities={location.localities}
+        faqs={location.customFaqs || []}
+        breadcrumbs={[
+          { name: 'Home', item: '/' },
+          { name: `${location.city} Cleaning`, item: `/${location.slug || activeSlug}` },
+        ]}
+      />
+
       {/* 1. HERO SECTION WITH AMBIENT BACKGROUND PHOTO */}
       <section className="relative overflow-hidden pt-12 pb-20 sm:pt-16 sm:pb-24 border-b border-skyline-100">
         {/* Real Indian Home Cleaning Backdrop with Soft Gradient Overlay */}
@@ -452,7 +424,43 @@ const LocationLandingPage = ({ defaultSlug }) => {
         </section>
       )}
 
-      {/* 6. CALL TO ACTION SECTION */}
+      {/* 6. NEARBY TRICITY SERVICE LOCATIONS (SEO INTERNAL LINKING) */}
+      <section className="py-16 bg-slate-50/70 border-b border-skyline-100">
+        <div className="container-x">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <span className="text-skyline-600 font-bold uppercase tracking-wider text-xs">Full Tricity Network</span>
+            <h2 className="text-2xl sm:text-3xl font-bold text-navy-950 mt-1 mb-2">
+              Deep Cleaning Services Across Chandigarh Tricity
+            </h2>
+            <p className="text-sm text-navy-800/70">
+              Serving every corner of Tricity with dedicated mobile teams and 24/7 doorstep dispatch.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            {nearbyLocations.map((item) => (
+              <Link
+                key={item.slug}
+                to={item.slug}
+                className={`p-4 rounded-xl border transition-all text-left group ${
+                  item.city.toLowerCase() === location.city.toLowerCase()
+                    ? 'bg-skyline-50 border-skyline-300 ring-2 ring-skyline-400/20'
+                    : 'bg-white border-skyline-100 hover:border-skyline-300 hover:shadow-xs'
+                }`}
+              >
+                <div className="flex items-center justify-between mb-1.5">
+                  <span className="font-bold text-sm text-navy-950 group-hover:text-skyline-600 transition-colors">
+                    {item.city}
+                  </span>
+                  <ArrowRight size={14} className="text-skyline-600 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+                <p className="text-[11px] text-navy-800/60 leading-relaxed line-clamp-2">{item.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. CALL TO ACTION SECTION */}
       <CTASection
         title={`Ready to Book Your Deep Cleaning in ${location.city}?`}
         subtitle={`Open 24 Hours · Rapid Doorstep Arrival in ${location.city} · Call or WhatsApp Anytime`}

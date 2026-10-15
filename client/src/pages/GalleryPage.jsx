@@ -1,8 +1,18 @@
 import Gallery from '../components/Gallery';
 import CTASection from '../components/CTASection';
+import SEO from '../components/SEO';
 
 const GalleryPage = () => (
   <div>
+    <SEO
+      title="Photo Gallery | Authentic House Cleaning Projects in Chandigarh"
+      description="View real photos of our house deep cleaning, kitchen degreasing, bathroom descaling, sofa shampooing, and floor machine scrubbing projects across Tricity."
+      canonical="/gallery"
+      breadcrumbs={[
+        { name: 'Home', item: '/' },
+        { name: 'Photo Gallery', item: '/gallery' },
+      ]}
+    />
     <section className="relative py-16 bg-grid-fade border-b border-skyline-100 overflow-hidden">
       {/* Ambient Backdrop */}
       <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">

@@ -8,7 +8,9 @@ import CallButton from '../components/CallButton';
 import WhatsAppButton from '../components/WhatsAppButton';
 import CTASection from '../components/CTASection';
 import FAQ from '../components/FAQ';
+import SEO from '../components/SEO';
 import { serviceWhatsappMessage } from '../utils/business';
+import { faqsData } from '../data/servicesData';
 
 // Dynamic route: /services/:slug renders whichever service matches the
 // slug, sourced from the API with a bundled fallback dataset.
@@ -44,6 +46,18 @@ const ServiceDetail = () => {
 
   return (
     <div>
+      <SEO
+        title={`${service.title} in Chandigarh, Mohali, Panchkula`}
+        description={service.shortDescription || service.description}
+        canonical={`/services/${service.slug}`}
+        image={service.image}
+        faqs={faqsData}
+        breadcrumbs={[
+          { name: 'Home', item: '/' },
+          { name: 'Services', item: '/services' },
+          { name: service.title, item: `/services/${service.slug}` },
+        ]}
+      />
       <section className="py-16 bg-grid-fade border-b border-skyline-100">
         <div className="container-x grid lg:grid-cols-2 gap-10 items-center">
           <div>

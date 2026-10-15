@@ -15,9 +15,10 @@ const serviceLinks = [
 const seoLocations = [
   { to: '/cleaning-service-in-mohali', label: 'Cleaning Service in Mohali' },
   { to: '/cleaning-service-in-zirakpur', label: 'Cleaning Service in Zirakpur' },
+  { to: '/cleaning-service-in-panchkula', label: 'Cleaning Service in Panchkula' },
+  { to: '/cleaning-service-in-chandigarh', label: 'Cleaning Service in Chandigarh' },
   { to: '/cleaning-service-in-tricity', label: 'Cleaning Service in Tricity' },
   { to: '/cleaning-service-near-me', label: 'Cleaning Service Near Me' },
-  { to: '/cleaning-service-in-chandigarh', label: 'Cleaning Service in Chandigarh' },
   { to: '/cleaning-service-in-kharar', label: 'Cleaning Service in Kharar' },
   { to: '/cleaning-service-in-sas-nagar', label: 'Cleaning Service in SAS Nagar' },
 ];

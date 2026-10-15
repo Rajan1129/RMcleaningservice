@@ -1,5 +1,6 @@
 import { CheckCircle2, Star, Clock, Heart, ShieldCheck, ThumbsUp } from 'lucide-react';
 import CTASection from '../components/CTASection';
+import SEO from '../components/SEO';
 
 const items = [
   {
@@ -36,6 +37,15 @@ const items = [
 
 const WhyChooseUs = () => (
   <div>
+    <SEO
+      title="Why Choose Us | 4.9★ Rated Cleaning in Chandigarh & Tricity"
+      description="Why R M Home Cleaning is Chandigarh's #1 rated house cleaning service. 4.9★ rating (18 reviews), open 24 hours, polite trained staff, LGBTQ+ friendly & transparent quotes."
+      canonical="/why-choose-us"
+      breadcrumbs={[
+        { name: 'Home', item: '/' },
+        { name: 'Why Choose Us', item: '/why-choose-us' },
+      ]}
+    />
     <section className="relative py-16 bg-grid-fade overflow-hidden">
       {/* Ambient Background Picture */}
       <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">

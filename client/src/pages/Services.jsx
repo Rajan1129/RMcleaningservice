@@ -1,11 +1,21 @@
 import ServiceCard from '../components/ServiceCard';
 import CTASection from '../components/CTASection';
+import SEO from '../components/SEO';
 import { useServices } from '../hooks/useServices';
 
 const Services = () => {
   const { services } = useServices();
   return (
     <div>
+      <SEO
+        title="House & Deep Cleaning Services in Chandigarh Tricity"
+        description="Explore top-rated house cleaning services in Chandigarh, Mohali, Panchkula & Zirakpur. Full flat deep cleaning, kitchen degreasing, bathroom descaling, sofa shampooing & water tank cleaning. Open 24/7."
+        canonical="/services"
+        breadcrumbs={[
+          { name: 'Home', item: '/' },
+          { name: 'Services', item: '/services' },
+        ]}
+      />
       <section className="relative overflow-hidden py-16 bg-grid-fade border-b border-skyline-100">
         {/* Ambient Background Picture */}
         <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">

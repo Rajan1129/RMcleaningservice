@@ -1,5 +1,6 @@
 import { MapPin, Phone, Star, Clock, Heart, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import CTASection from '../components/CTASection';
+import SEO from '../components/SEO';
 import { BUSINESS } from '../utils/business';
 
 const points = [
@@ -13,6 +14,15 @@ const points = [
 
 const About = () => (
   <div>
+    <SEO
+      title="About Us | 4.9★ House Cleaning Service Chandigarh"
+      description="Learn about R M Home Cleaning — Sector 50, Chandigarh based house cleaning service with 4.9★ rating on Google. Open 24 Hours across Chandigarh, Mohali & Panchkula."
+      canonical="/about"
+      breadcrumbs={[
+        { name: 'Home', item: '/' },
+        { name: 'About Us', item: '/about' },
+      ]}
+    />
     <section className="relative py-20 bg-grid-fade overflow-hidden">
       {/* Ambient Indian home cleaning background */}
       <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">

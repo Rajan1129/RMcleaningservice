@@ -470,6 +470,45 @@ const locationPages = [
     ],
     order: 7,
   },
+  {
+    city: 'Panchkula',
+    slug: 'cleaning-service-in-panchkula',
+    metaTitle: 'Home Cleaning Service in Panchkula | 4.9★ Deep Clean | R M Home Cleaning',
+    metaDescription: 'Best house cleaning service in Panchkula (Sectors 1 to 28, MDC, Pinjore & Kalka). Kitchen, bathroom, sofa & full home deep cleaning. Open 24/7. Call 096460 78122.',
+    heroTitle: 'Top-Rated House & Deep Cleaning Services in Panchkula',
+    heroSubtitle: 'Serving MDC Mansa Devi Complex, Sector 20, Sector 4, Sector 14, Sector 21 & All Urban Estate Sectors',
+    description: 'Looking for a verified, trusted cleaning team in Panchkula? R M Home Cleaning provides specialized deep cleaning for independent kothis, builder floors, and apartments across Panchkula. Our experienced crew brings industrial vacuum machines, single-disc scrubbers, and safe eco-friendly materials for immaculate results.',
+    heroImage: '/images/hero-man-cleaning-window.jpg',
+    localities: [
+      'MDC (Mansa Devi Complex) Sector 4 & 5', 'Sector 20', 'Sector 4', 'Sector 14',
+      'Sector 21', 'Sector 12', 'Sector 11', 'Sector 15', 'Sector 2', 'Sector 6',
+      'Sector 7', 'Sector 8', 'Sector 9', 'Sector 10', 'Sector 16', 'Sector 25',
+      'Sector 26', 'Pinjore', 'Kalka', 'Industrial Area Phase 1 & 2 Panchkula',
+    ],
+    priceTiers: [
+      { label: '1 BHK Society Flat', price: 'Free Custom Quote', note: 'Rooms, modular kitchen & washroom' },
+      { label: '2 BHK Deep Clean', price: 'Free Custom Quote', note: 'Complete flat scrub & balcony' },
+      { label: '3 BHK Society / Floor', price: 'Free Custom Quote', note: 'All rooms, fans, switchboards & tiles' },
+      { label: 'Panchkula Kothi / Villa', price: 'Free Custom Quote', note: 'Multi-floor detailing & terrace' },
+      { label: 'Kitchen Oil Degreasing', price: 'Free Custom Quote', note: 'Exhaust, chimney & slab descaling' },
+      { label: 'Bathroom Descaling', price: 'Free Custom Quote', note: 'Anti-fungal scrub & chrome polishing' },
+    ],
+    customFaqs: [
+      {
+        question: 'Do you provide home cleaning in MDC and Sector 20 Panchkula?',
+        answer: 'Yes! We frequently serve MDC Mansa Devi Complex, Sector 20 high-rises, Sector 4, Sector 14, and all Panchkula sectors with prompt doorstep arrival.',
+      },
+      {
+        question: 'Can I get same-day deep cleaning in Panchkula?',
+        answer: 'Yes, we are open 24 hours. Call 096460 78122 directly for urgent or same-day service bookings in Panchkula.',
+      },
+      {
+        question: 'Do your cleaners bring their own scrubbers and vacuum machines?',
+        answer: 'Yes! Our staff arrives with commercial wet/dry vacuum cleaners, single-disc floor scrubbing machines, glass cleaning squeegees, and safe eco-friendly cleaning supplies.',
+      },
+    ],
+    order: 8,
+  },
 ];
 
 const run = async () => {
@@ -526,7 +565,7 @@ const run = async () => {
     mapEmbedUrl: 'https://www.google.com/maps?q=Progressive+Society,+Sector+50,+Chandigarh+160047&output=embed',
     googleMapsUrl: 'https://maps.google.com/?q=Progressive+Society,+Sector+50,+Chandigarh+160047',
     googleReviewsUrl: 'https://maps.google.com/?q=Progressive+Society,+Sector+50,+Chandigarh+160047',
-    website: 'https://sparkle-spark-homes.lovable.app/',
+    website: 'https://r-mcleaningservice.vercel.app',
   });
   console.log('Seeded R M Home Cleaning business info.');
 

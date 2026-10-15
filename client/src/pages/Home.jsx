@@ -9,6 +9,8 @@ import FAQ from '../components/FAQ';
 import { useServices } from '../hooks/useServices';
 import { BUSINESS, whatsappLink } from '../utils/business';
 import { verifiedReviews } from '../data/reviewsData';
+import { faqsData } from '../data/servicesData';
+import SEO from '../components/SEO';
 
 const trustItems = [
   '4.9★ Rated on Google (18 Reviews)',
@@ -40,6 +42,14 @@ const Home = () => {
 
   return (
     <div>
+      <SEO
+        title="#1 Cleaning Service in Chandigarh, Mohali, Zirakpur & Panchkula"
+        description="R M Home Cleaning — 4.9★ rated House & Deep Cleaning Service in Sector 50, Chandigarh. Open 24 Hours. Deep cleaning, kitchen, bathroom, sofa & carpet cleaning across Chandigarh, Mohali, Zirakpur, Panchkula & Tricity. Call 096460 78122."
+        canonical="/"
+        faqs={faqsData}
+        breadcrumbs={[{ name: 'Home', item: '/' }]}
+      />
+
       {/* 1. HERO SECTION WITH AMBIENT BACKGROUND */}
       <section className="relative overflow-hidden pt-12 pb-20 sm:pt-16 sm:pb-28">
         <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
@@ -309,8 +319,97 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 8. FAQ SECTION WITH AMBIENT BACKGROUND */}
-      <section className="relative py-20 bg-white overflow-hidden">
+      {/* 8. TRICITY COVERAGE AREAS (LOCAL SEO ENGINE) */}
+      <section className="relative py-20 bg-white overflow-hidden border-t border-skyline-100">
+        <div className="container-x">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <span className="text-skyline-600 font-bold uppercase tracking-wider text-xs">Doorstep Coverage</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy-950 mt-1 mb-3">
+              Cleaning Service Across Chandigarh, Mohali, Zirakpur & Panchkula
+            </h2>
+            <p className="text-navy-800/70">
+              Based at Progressive Society, Sector 50, Chandigarh — delivering on-time deep cleaning to every locality with 24/7 availability.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              {
+                city: 'Mohali',
+                link: '/cleaning-service-in-mohali',
+                headline: 'Phases 1–11, Aerocity & Sector 70-82',
+                detail: 'Full flat deep clean, kitchen oil degreasing, and sofa shampooing across all Mohali sectors.',
+              },
+              {
+                city: 'Zirakpur',
+                link: '/cleaning-service-in-zirakpur',
+                headline: 'VIP Road, Dhakoli & High-Rises',
+                detail: 'Balcony glass buffing, society flat scrubbing, and post-construction cleaning.',
+              },
+              {
+                city: 'Panchkula',
+                link: '/cleaning-service-in-panchkula',
+                headline: 'MDC, Sector 20, 4, 14, 21 & Urban Estate',
+                detail: 'Kothi deep detailing, washroom descaling, and eco-friendly floor buffing.',
+              },
+              {
+                city: 'Chandigarh',
+                link: '/cleaning-service-in-chandigarh',
+                headline: 'Sector 50 HQ & Sectors 1–60',
+                detail: 'Local doorstep teams arriving within 45-60 mins for kothis, apartments and offices.',
+              },
+              {
+                city: 'Tricity Hub',
+                link: '/cleaning-service-in-tricity',
+                headline: 'Entire Tri-City Metropolitan Area',
+                detail: 'Unified 24-hour deep cleaning coverage with transparent estimates and zero hidden fees.',
+              },
+              {
+                city: 'Near Me',
+                link: '/cleaning-service-near-me',
+                headline: 'Emergency & Same-Day Cleaners',
+                detail: 'Immediate cleaner dispatch to your exact sector or society within 45 to 60 minutes.',
+              },
+              {
+                city: 'Kharar',
+                link: '/cleaning-service-in-kharar',
+                headline: 'Sunny Enclave, Gillco & Landran',
+                detail: 'Move-in & tenant handover deep cleaning for new flats and villas in Kharar.',
+              },
+              {
+                city: 'SAS Nagar',
+                link: '/cleaning-service-in-sas-nagar',
+                headline: 'Industrial Hub & Corporate Tech Parks',
+                detail: 'Flexible night and weekend office cleaning, marble floor scrubbing & glass care.',
+              },
+            ].map((loc) => (
+              <Link
+                key={loc.link}
+                to={loc.link}
+                className="group p-5 rounded-2xl border border-skyline-100 bg-slate-50/50 hover:bg-skyline-50/40 hover:border-skyline-300 transition-all shadow-xs hover:shadow-md flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-extrabold text-base text-navy-950 group-hover:text-skyline-600 transition-colors">
+                      Cleaning in {loc.city}
+                    </span>
+                    <ArrowRight size={15} className="text-skyline-600 -translate-x-1 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                  </div>
+                  <p className="text-xs font-semibold text-skyline-700 mb-1.5">{loc.headline}</p>
+                  <p className="text-xs text-navy-800/70 leading-relaxed">{loc.detail}</p>
+                </div>
+                <div className="mt-4 pt-3 border-t border-skyline-100/60 flex items-center justify-between text-[11px] font-medium text-navy-800/60">
+                  <span>Open 24/7</span>
+                  <span className="text-skyline-600 font-semibold group-hover:underline">Explore Locality →</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 9. FAQ SECTION WITH AMBIENT BACKGROUND */}
+      <section className="relative py-20 bg-slate-50/60 overflow-hidden">
         <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
           <img
             src="/images/bathroom-cleaning.jpg"

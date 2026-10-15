@@ -15,9 +15,10 @@ const navLinks = [
 const locationDropdown = [
   { to: '/cleaning-service-in-mohali', label: 'Mohali' },
   { to: '/cleaning-service-in-zirakpur', label: 'Zirakpur' },
+  { to: '/cleaning-service-in-panchkula', label: 'Panchkula' },
+  { to: '/cleaning-service-in-chandigarh', label: 'Chandigarh' },
   { to: '/cleaning-service-in-tricity', label: 'Tricity' },
   { to: '/cleaning-service-near-me', label: 'Near Me' },
-  { to: '/cleaning-service-in-chandigarh', label: 'Chandigarh' },
   { to: '/cleaning-service-in-kharar', label: 'Kharar' },
   { to: '/cleaning-service-in-sas-nagar', label: 'SAS Nagar' },
 ];

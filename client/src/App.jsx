@@ -64,6 +64,14 @@ function App() {
           element={<LocationLandingPage key="kharar" defaultSlug="cleaning-service-in-kharar" />}
         />
         <Route
+          path="/cleaning-service-in-panchkula"
+          element={<LocationLandingPage key="panchkula" defaultSlug="cleaning-service-in-panchkula" />}
+        />
+        <Route
+          path="/cleaning-service-in-panchkulla"
+          element={<LocationLandingPage key="panchkulla" defaultSlug="cleaning-service-in-panchkula" />}
+        />
+        <Route
           path="/cleaning-service-in-sas-nagar"
           element={<LocationLandingPage key="sas-nagar" defaultSlug="cleaning-service-in-sas-nagar" />}
         />

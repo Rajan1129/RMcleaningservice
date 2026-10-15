@@ -1,10 +1,20 @@
 import { Phone, MapPin, MessageCircle, Clock, Star, Heart, ShieldCheck } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 import MapSection from '../components/MapSection';
+import SEO from '../components/SEO';
 import { BUSINESS, whatsappLink, DEFAULT_WHATSAPP_MESSAGE } from '../utils/business';
 
 const Contact = () => (
   <div>
+    <SEO
+      title="Contact Us | Book Deep Cleaning Service in Chandigarh"
+      description="Book 24/7 house deep cleaning in Chandigarh, Mohali, Panchkula & Zirakpur. Call 096460 78122 or send a WhatsApp message. Instant doorstep arrival."
+      canonical="/contact"
+      breadcrumbs={[
+        { name: 'Home', item: '/' },
+        { name: 'Contact Us', item: '/contact' },
+      ]}
+    />
     <section className="relative py-16 bg-grid-fade border-b border-skyline-100 overflow-hidden">
       {/* Ambient Backdrop */}
       <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">

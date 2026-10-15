@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Star, ExternalLink, CheckCircle2, MessageCircle, MapPin, Navigation, Heart, ShieldCheck } from 'lucide-react';
 import apiClient from '../services/api';
 import CTASection from '../components/CTASection';
+import SEO from '../components/SEO';
 import { BUSINESS, whatsappLink, DEFAULT_WHATSAPP_MESSAGE } from '../utils/business';
 import { reviewsSummary, verifiedReviews } from '../data/reviewsData';
 
@@ -19,6 +20,15 @@ const Reviews = () => {
 
   return (
     <div>
+      <SEO
+        title="Google Reviews | 4.9★ Customer Ratings (18 Reviews)"
+        description="Read 18 verified 4.9★ Google reviews for R M Home Cleaning in Sector 50, Chandigarh. Real customer feedback on deep cleaning, polite staff, and punctuality."
+        canonical="/reviews"
+        breadcrumbs={[
+          { name: 'Home', item: '/' },
+          { name: 'Google Reviews', item: '/reviews' },
+        ]}
+      />
       {/* 1. HEADER SECTION WITH BACKGROUND PHOTO */}
       <section className="relative py-16 bg-grid-fade border-b border-skyline-100 overflow-hidden">
         <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">

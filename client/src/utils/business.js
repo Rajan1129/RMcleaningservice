@@ -15,7 +15,7 @@ export const BUSINESS = {
   rating: 4.9,
   reviewsCount: 18,
   serviceArea: 'Sector 50 Chandigarh, Mohali, Panchkula & Tricity',
-  website: 'https://sparkle-spark-homes.lovable.app/',
+  website: 'https://r-mcleaningservice.vercel.app',
   googleMapsUrl: 'https://maps.google.com/?q=Progressive+Society,+Sector+50,+Chandigarh+160047',
   mapEmbedUrl: 'https://www.google.com/maps?q=Progressive+Society,+Sector+50,+Chandigarh+160047&output=embed',
   badges: [
