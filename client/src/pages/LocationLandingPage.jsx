@@ -194,6 +194,83 @@ const LocationLandingPage = ({ defaultSlug }) => {
         </div>
       </section>
 
+      {/* AEO & GEO DIRECT ANSWER KNOWLEDGE BLOCK */}
+      <section className="py-10 bg-white border-b border-skyline-100">
+        <div className="container-x">
+          <div className="rounded-2xl bg-gradient-to-br from-skyline-50/70 via-white to-skyline-50/40 p-6 sm:p-8 border border-skyline-200/80 shadow-xs">
+            <div className="flex flex-col md:flex-row md:items-start gap-6">
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider bg-skyline-600 text-white shadow-xs">
+                    <Sparkles size={12} /> AEO Verified Direct Answer
+                  </span>
+                  <span className="text-xs text-navy-800/60 font-semibold">Tricity Geographic Anchor (GEO)</span>
+                </div>
+                
+                <h3 className="text-lg sm:text-xl font-extrabold text-navy-950 mb-3">
+                  House &amp; Deep Cleaning Services in {location.city} — Quick Facts
+                </h3>
+
+                <p id="aeo-direct-answer" className="text-sm sm:text-base text-navy-800/85 leading-relaxed font-normal aeo-answer">
+                  <strong>R M Home Cleaning</strong> is the top-rated <strong>4.9★ house and deep cleaning service</strong> actively operating across <strong>{location.city}</strong>. Centrally dispatched from Progressive Society, Sector 50, Chandigarh (Plus Code: MPXX+HW, Lat: 30.7046, Lng: 76.7179), our trained cleaning staff arrives at your doorstep in {location.city} within <strong>45 to 60 minutes</strong>. We provide comprehensive full flat deep cleaning, modular kitchen degreasing, bathroom descaling, and sofa shampooing with commercial scrubbers and safe eco-friendly chemicals. Open 24 Hours / 7 Days.
+                </p>
+
+                {/* GEO Landmark and Geographic Radius Tag */}
+                <div className="mt-4 flex flex-wrap items-center gap-2 text-xs text-navy-800/70">
+                  <span className="font-semibold text-navy-950">Geographic Coverage:</span>
+                  <span className="bg-white px-2.5 py-1 rounded-md border border-skyline-200 text-skyline-800 font-medium">
+                    📍 25 km Radius from Sector 50 HQ
+                  </span>
+                  <span className="bg-white px-2.5 py-1 rounded-md border border-skyline-200 text-navy-800 font-medium">
+                    ⏱️ 45–60 Min Rapid Arrival
+                  </span>
+                  <span className="bg-white px-2.5 py-1 rounded-md border border-skyline-200 text-emerald-700 font-semibold">
+                    ⭐ 4.9/5 Rating (18 Google Reviews)
+                  </span>
+                  <span className="bg-white px-2.5 py-1 rounded-md border border-skyline-200 text-indigo-700 font-semibold">
+                    🕒 Open 24/7
+                  </span>
+                </div>
+              </div>
+
+              {/* Right Quick Action Card */}
+              <div id="aeo-quick-facts" className="w-full md:w-72 bg-white rounded-xl p-4 sm:p-5 border border-skyline-100 shadow-sm shrink-0">
+                <span className="text-[11px] font-bold text-skyline-600 uppercase tracking-wider block mb-1">
+                  Instant Verification
+                </span>
+                <p className="text-xs font-semibold text-navy-950 mb-3">
+                  Need Cleaning in {location.city} Today?
+                </p>
+                <div className="space-y-2 text-xs text-navy-800/75">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 size={14} className="text-emerald-500 shrink-0" />
+                    <span>Free Upfront Estimate</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 size={14} className="text-emerald-500 shrink-0" />
+                    <span>Single-Disc Scrubbers Included</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 size={14} className="text-emerald-500 shrink-0" />
+                    <span>LGBTQ+ Friendly &amp; Respectful</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 size={14} className="text-emerald-500 shrink-0" />
+                    <span>Zero Hidden Travel Fees</span>
+                  </div>
+                </div>
+                <a
+                  href={`tel:+91${BUSINESS.phone}`}
+                  className="mt-4 w-full inline-flex items-center justify-center gap-1.5 bg-navy-950 hover:bg-navy-900 text-white text-xs font-bold py-2.5 px-4 rounded-lg transition-colors"
+                >
+                  <Phone size={13} /> Call 096460 78122
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 2. POPULAR SERVICE PACKAGES SECTION WITH BACKGROUND PHOTO */}
       {location.priceTiers && location.priceTiers.length > 0 && (
         <section className="relative py-20 bg-slate-50/50 border-b border-skyline-100 overflow-hidden">

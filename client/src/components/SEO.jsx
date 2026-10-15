@@ -5,15 +5,18 @@ const SITE_URL = 'https://r-mcleaningservice.vercel.app';
 const DEFAULT_IMAGE = `${SITE_URL}/hero-man-cleaning-window.jpg`;
 
 /**
- * Enterprise SEO & Structured Data (JSON-LD) Component
+ * Enterprise SEO, AEO (Answer Engine Optimization) & GEO (Generative/Geographic Optimization) Component
  * Injects:
- * 1. Title & Meta descriptions
- * 2. Geo tags (Region, Placename, ICBM Coordinates)
+ * 1. Title, Meta descriptions & Canonical URL
+ * 2. Geo tags (Region, Placename, ICBM Coordinates, Dublin Core)
  * 3. OpenGraph & Twitter Cards
- * 4. Canonical URL
- * 5. Schema.org LocalBusiness / CleaningService
- * 6. Schema.org FAQPage (Rich SERP snippets)
- * 7. Schema.org BreadcrumbList
+ * 4. Schema.org LocalBusiness & CleaningService with:
+ *    - SpeakableSpecification (Voice search, Siri, Google Assistant)
+ *    - GeoCircle with 25km radius (Tricity geographic boundary)
+ *    - knowsAbout & sameAs knowledge graph anchors (LLM ingestion)
+ * 5. Schema.org FAQPage (Rich SERP snippets & AI Overview citations)
+ * 6. Schema.org BreadcrumbList
+ * 7. Reference to llms.txt standard
  */
 const SEO = ({
   title,
@@ -25,6 +28,7 @@ const SEO = ({
   breadcrumbs = [],
   city,
   localities = [],
+  directAnswer = null,
 }) => {
   useEffect(() => {
     // 1. Update Title
@@ -61,12 +65,18 @@ const SEO = ({
     setMeta('robots', 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1');
     setMeta('author', 'R M Home Cleaning');
 
-    // Geo Meta Tags for Google Local Ranking
+    // Geo Meta Tags for Google & AI Engine Local Ranking (GEO)
     const geoPlace = city ? `${city}, Tricity, India` : 'Chandigarh, Mohali, Panchkula, Zirakpur, India';
     setMeta('geo.region', 'IN-CH');
     setMeta('geo.placename', geoPlace);
     setMeta('geo.position', '30.7046;76.7179');
     setMeta('ICBM', '30.7046, 76.7179');
+
+    // Dublin Core Metadata (AEO / Academic / Semantic Crawlers)
+    setMeta('DC.title', fullTitle);
+    setMeta('DC.creator', 'R M Home Cleaning');
+    setMeta('DC.description', cleanDesc);
+    setMeta('DC.coverage', 'Chandigarh, Mohali, Panchkula, Zirakpur, Kharar, Tricity');
 
     // OpenGraph
     setMeta('og:title', fullTitle, 'property');
@@ -92,6 +102,16 @@ const SEO = ({
     }
     canonicalLink.setAttribute('href', pageUrl);
 
+    // LLM Reference Link for AI Search Engines
+    let llmsLink = document.querySelector('link[rel="llms"]');
+    if (!llmsLink) {
+      llmsLink = document.createElement('link');
+      llmsLink.setAttribute('rel', 'llms');
+      llmsLink.setAttribute('href', '/llms.txt');
+      llmsLink.setAttribute('type', 'text/plain');
+      document.head.appendChild(llmsLink);
+    }
+
     // Schema.org Structured Data
     const allAreasServed =
       localities.length > 0
@@ -106,13 +126,19 @@ const SEO = ({
             'SAS Nagar',
           ];
 
-    // LocalBusiness / CleaningService Schema
+    // LocalBusiness / CleaningService Schema with AEO & GEO enhancements
     const localBusinessSchema = {
       '@context': 'https://schema.org',
       '@type': ['CleaningService', 'LocalBusiness', 'HomeAndConstructionBusiness'],
       '@id': `${SITE_URL}/#business`,
       name: city ? `R M Home Cleaning - ${city}` : 'R M Home Cleaning',
-      alternateName: 'RM House & Deep Cleaning Services Chandigarh',
+      alternateName: [
+        'RM House & Deep Cleaning Services Chandigarh',
+        'R M Home Cleaning Tricity',
+        'RM Cleaning Service Mohali',
+        'RM Cleaning Service Zirakpur',
+        'RM Cleaning Service Panchkula',
+      ],
       url: pageUrl,
       logo: `${SITE_URL}/rm-logo.jpg`,
       image: shareImage,
@@ -134,6 +160,31 @@ const SEO = ({
         longitude: 76.7179,
       },
       hasMap: BUSINESS.googleMapsUrl,
+      sameAs: [
+        BUSINESS.googleMapsUrl,
+        'https://wa.me/919646078122',
+      ],
+      // AEO: Speakable Specification for voice search & assistant audio answers
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['#aeo-direct-answer', '#aeo-quick-facts', 'h1', '.aeo-answer'],
+      },
+      // GEO: Geographic Circle defining 25km radius around Tricity
+      areaServed: [
+        {
+          '@type': 'GeoCircle',
+          geoMidpoint: {
+            '@type': 'GeoCoordinates',
+            latitude: 30.7046,
+            longitude: 76.7179,
+          },
+          geoRadius: '25000',
+        },
+        ...allAreasServed.map((area) => ({
+          '@type': 'AdministrativeArea',
+          name: area,
+        })),
+      ],
       openingHoursSpecification: [
         {
           '@type': 'OpeningHoursSpecification',
@@ -149,10 +200,20 @@ const SEO = ({
         bestRating: '5',
         worstRating: '1',
       },
-      areaServed: allAreasServed.map((area) => ({
-        '@type': 'AdministrativeArea',
-        name: area,
-      })),
+      // LLM Knowledge Graph Tags
+      knowsAbout: [
+        'House Deep Cleaning',
+        'Modular Kitchen Degreasing',
+        'Bathroom Limescale Descaling',
+        'Sofa Shampooing and Upholstery Care',
+        'Single-Disc Floor Machine Scrubbing',
+        'Water Tank Antibacterial Cleaning',
+        'Move-in Move-out Tenancy Cleaning',
+        'Chandigarh Tricity Local Cleaning Services',
+        'Mohali Deep Cleaners',
+        'Zirakpur Society Cleaning',
+        'Panchkula Kothi Cleaning',
+      ],
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
         name: 'House & Deep Cleaning Services',
@@ -219,7 +280,7 @@ const SEO = ({
     }
     businessScript.text = JSON.stringify(localBusinessSchema);
 
-    // FAQPage Schema (Triggers Rich SERP Accordions)
+    // FAQPage Schema (Triggers Rich SERP Accordions & Answer Engine Citations)
     let faqScript = document.getElementById('schema-faq');
     if (faqs && faqs.length > 0) {
       if (!faqScript) {
@@ -278,7 +339,7 @@ const SEO = ({
       const bcEl = document.getElementById('schema-breadcrumbs');
       if (bcEl) bcEl.remove();
     };
-  }, [title, description, canonical, image, type, faqs, breadcrumbs, city, localities]);
+  }, [title, description, canonical, image, type, faqs, breadcrumbs, city, localities, directAnswer]);
 
   return null;
 };

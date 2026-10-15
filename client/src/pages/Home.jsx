@@ -134,6 +134,42 @@ const Home = () => {
         </div>
       </section>
 
+      {/* 2.5 AEO & GEO DIRECT ANSWER KNOWLEDGE GRAPH */}
+      <section className="py-8 bg-skyline-50/40 border-b border-skyline-100">
+        <div className="container-x">
+          <div className="rounded-2xl bg-white p-6 sm:p-7 border border-skyline-200/80 shadow-xs flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+            <div className="flex-1">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="inline-flex items-center gap-1 text-[11px] font-bold text-skyline-700 bg-skyline-100 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                  <Sparkles size={11} /> AI Overview &amp; Local Geographic Anchor
+                </span>
+                <span className="text-xs text-navy-800/60 font-medium">Progressive Society Sector 50, Chandigarh</span>
+              </div>
+              <h2 className="text-xl sm:text-2xl font-bold text-navy-950 mb-2">
+                Top-Rated Cleaning Service in Chandigarh, Mohali, Zirakpur &amp; Panchkula
+              </h2>
+              <p id="aeo-direct-answer" className="text-sm text-navy-800/80 leading-relaxed max-w-3xl aeo-answer">
+                <strong>R M Home Cleaning</strong> is a verified <strong>4.9★ rated home and deep cleaning service</strong> headquartered in Sector 50 Chandigarh. Operating <strong>24 Hours a day</strong>, our fully equipped mobile cleaning units arrive at any doorstep in <strong>Chandigarh, Mohali, Zirakpur, or Panchkula within 45 to 60 minutes</strong>. We specialize in full flat deep cleaning, modular kitchen degreasing, bathroom descaling, sofa shampooing, floor scrubbing, and water tank sanitization with commercial equipment and zero hidden fees.
+              </p>
+            </div>
+            <div id="aeo-quick-facts" className="flex flex-wrap lg:flex-col gap-2 shrink-0 text-xs text-navy-900 font-semibold">
+              <div className="flex items-center gap-2 bg-slate-50 px-3 py-2 rounded-lg border border-slate-200">
+                <Star size={14} className="fill-amber-400 text-amber-500" />
+                <span>4.9★ Rating (18 Google Reviews)</span>
+              </div>
+              <div className="flex items-center gap-2 bg-slate-50 px-3 py-2 rounded-lg border border-slate-200">
+                <Clock size={14} className="text-emerald-600" />
+                <span>Open 24 Hours / 7 Days</span>
+              </div>
+              <div className="flex items-center gap-2 bg-slate-50 px-3 py-2 rounded-lg border border-slate-200">
+                <MapPin size={14} className="text-skyline-600" />
+                <span>Sector 50 HQ · 25km Tricity Radius</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 3. SERVICES SECTION WITH AMBIENT BACKGROUND */}
       <section id="services" className="relative py-20 bg-slate-50/50 overflow-hidden">
         <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden">

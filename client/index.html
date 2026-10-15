@@ -16,12 +16,19 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="author" content="R M Home Cleaning" />
     <link rel="canonical" href="https://r-mcleaningservice.vercel.app/" />
+    <link rel="llms" href="/llms.txt" type="text/plain" title="LLM Information" />
 
-    <!-- Geo Meta Tags for Google Local Search Ranking -->
+    <!-- Geo Meta Tags for Google Local Search Ranking (GEO) -->
     <meta name="geo.region" content="IN-CH" />
     <meta name="geo.placename" content="Chandigarh, Mohali, Panchkula, Zirakpur" />
     <meta name="geo.position" content="30.7046;76.7179" />
     <meta name="ICBM" content="30.7046, 76.7179" />
+
+    <!-- Dublin Core Semantic Metadata (AEO / Voice Search) -->
+    <meta name="DC.title" content="#1 Cleaning Service in Chandigarh, Mohali, Zirakpur &amp; Panchkula | R M Home Cleaning" />
+    <meta name="DC.creator" content="R M Home Cleaning" />
+    <meta name="DC.description" content="4.9★ rated house and deep cleaning across Chandigarh, Mohali, Zirakpur, Panchkula. Open 24 Hours. Call 096460 78122." />
+    <meta name="DC.coverage" content="Chandigarh, Mohali, Panchkula, Zirakpur, Kharar, Tricity" />
 
     <!-- OpenGraph Social Metadata -->
     <meta property="og:title" content="#1 Cleaning Service in Chandigarh, Mohali, Zirakpur &amp; Panchkula | 4.9★" />
@@ -49,14 +56,20 @@
       rel="stylesheet"
     />
 
-    <!-- Static Structured Data (JSON-LD) for Search Engine Crawlers -->
+    <!-- Static Structured Data (JSON-LD) with AEO & GEO for Search Engine Crawlers -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": ["CleaningService", "LocalBusiness", "HomeAndConstructionBusiness"],
         "@id": "https://r-mcleaningservice.vercel.app/#business",
         "name": "R M Home Cleaning",
-        "alternateName": "RM House & Deep Cleaning Services Chandigarh",
+        "alternateName": [
+          "RM House & Deep Cleaning Services Chandigarh",
+          "R M Home Cleaning Tricity",
+          "RM Cleaning Service Mohali",
+          "RM Cleaning Service Zirakpur",
+          "RM Cleaning Service Panchkula"
+        ],
         "url": "https://r-mcleaningservice.vercel.app/",
         "logo": "https://r-mcleaningservice.vercel.app/rm-logo.jpg",
         "image": "https://r-mcleaningservice.vercel.app/hero-man-cleaning-window.jpg",
@@ -78,6 +91,14 @@
           "longitude": 76.7179
         },
         "hasMap": "https://maps.google.com/?q=Progressive+Society,+Sector+50,+Chandigarh+160047",
+        "sameAs": [
+          "https://maps.google.com/?q=Progressive+Society,+Sector+50,+Chandigarh+160047",
+          "https://wa.me/919646078122"
+        ],
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": ["#aeo-direct-answer", "#aeo-quick-facts", "h1", ".aeo-answer"]
+        },
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
@@ -93,7 +114,28 @@
           "bestRating": "5",
           "worstRating": "1"
         },
+        "knowsAbout": [
+          "House Deep Cleaning",
+          "Modular Kitchen Degreasing",
+          "Bathroom Limescale Descaling",
+          "Sofa Shampooing and Upholstery Care",
+          "Single-Disc Floor Machine Scrubbing",
+          "Water Tank Antibacterial Cleaning",
+          "Chandigarh Tricity Local Cleaning Services",
+          "Mohali Deep Cleaners",
+          "Zirakpur Society Cleaning",
+          "Panchkula Kothi Cleaning"
+        ],
         "areaServed": [
+          {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+              "@type": "GeoCoordinates",
+              "latitude": 30.7046,
+              "longitude": 76.7179
+            },
+            "geoRadius": "25000"
+          },
           { "@type": "AdministrativeArea", "name": "Sector 50 Chandigarh" },
           { "@type": "AdministrativeArea", "name": "Mohali (Phases 1-11, Aerocity, IT City, Sector 70-82)" },
           { "@type": "AdministrativeArea", "name": "Zirakpur (VIP Road, Dhakoli, Baltana, Peermuchalla)" },
