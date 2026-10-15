@@ -23,12 +23,15 @@ import EnquiriesAdmin from './pages/admin/EnquiriesAdmin';
 import GalleryAdmin from './pages/admin/GalleryAdmin';
 import FaqsAdmin from './pages/admin/FaqsAdmin';
 import BusinessInfoAdmin from './pages/admin/BusinessInfoAdmin';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <Routes>
-      {/* Public Pages */}
-      <Route element={<MainLayout />}>
+    <>
+      <ScrollToTop />
+      <Routes>
+        {/* Public Pages */}
+        <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
         <Route path="/services/:slug" element={<ServiceDetail />} />
@@ -107,6 +110,7 @@ function App() {
         <Route path="business-info" element={<BusinessInfoAdmin />} />
       </Route>
     </Routes>
+    </>
   );
 }
 
