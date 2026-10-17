@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { BUSINESS } from '../utils/business';
 
-const SITE_URL = 'https://r-mcleaningservice.vercel.app';
+const SITE_URL = 'https://rmcleaningservice.in';
 const DEFAULT_IMAGE = `${SITE_URL}/hero-man-cleaning-window.jpg`;
 
 /**

@@ -565,7 +565,7 @@ const run = async () => {
     mapEmbedUrl: 'https://www.google.com/maps?q=Progressive+Society,+Sector+50,+Chandigarh+160047&output=embed',
     googleMapsUrl: 'https://maps.google.com/?q=Progressive+Society,+Sector+50,+Chandigarh+160047',
     googleReviewsUrl: 'https://maps.google.com/?q=Progressive+Society,+Sector+50,+Chandigarh+160047',
-    website: 'https://r-mcleaningservice.vercel.app',
+    website: 'https://rmcleaningservice.in',
   });
   console.log('Seeded R M Home Cleaning business info.');
 

@@ -22,7 +22,7 @@ const businessInfoSchema = new mongoose.Schema(
       default: 'https://maps.google.com/?q=Progressive+Society,+Sector+50,+Chandigarh+160047',
     },
     googleReviewsUrl: { type: String, default: '' },
-    website: { type: String, default: 'https://sparkle-spark-homes.lovable.app/' },
+    website: { type: String, default: 'https://rmcleaningservice.in' },
   },
   { timestamps: true }
 );

@@ -11,7 +11,7 @@
 - **Operating Hours**: Open 24 Hours / 7 Days a week (24/7 round-the-clock booking and emergency service)
 - **Primary Phone**: 096460 78122 / +91 96460 78122
 - **WhatsApp**: +91 96460 78122 (https://wa.me/919646078122)
-- **Website**: https://r-mcleaningservice.vercel.app
+- **Website**: https://rmcleaningservice.in
 - **Customer Rating**: 4.9 out of 5.0 Stars (Based on 18 verified Google Reviews)
 - **Attributes**: LGBTQ+ Friendly, Polite & Trained Staff, Punctual Arrival, Commercial Scrubbers & Industrial Vacuums Included, Eco-Friendly Cleaning Solutions, Transparent Estimates (No Hidden Fees)
 
@@ -73,19 +73,19 @@ R M Home Cleaning operates within a 25 km radius centered at Sector 50 Chandigar
 ---
 
 ## Important URL Endpoints
-- Homepage: https://r-mcleaningservice.vercel.app/
-- Mohali Cleaning Service: https://r-mcleaningservice.vercel.app/cleaning-service-in-mohali
-- Zirakpur Cleaning Service: https://r-mcleaningservice.vercel.app/cleaning-service-in-zirakpur
-- Panchkula Cleaning Service: https://r-mcleaningservice.vercel.app/cleaning-service-in-panchkula
-- Chandigarh Cleaning Service: https://r-mcleaningservice.vercel.app/cleaning-service-in-chandigarh
-- Tricity Cleaning Service: https://r-mcleaningservice.vercel.app/cleaning-service-in-tricity
-- Cleaning Service Near Me: https://r-mcleaningservice.vercel.app/cleaning-service-near-me
-- Services Catalog: https://r-mcleaningservice.vercel.app/services
-- Full Home Deep Cleaning: https://r-mcleaningservice.vercel.app/services/full-home-deep-cleaning
-- Kitchen Deep Cleaning: https://r-mcleaningservice.vercel.app/services/kitchen-deep-cleaning
-- Bathroom Deep Cleaning: https://r-mcleaningservice.vercel.app/services/bathroom-deep-cleaning
-- Sofa & Carpet Cleaning: https://r-mcleaningservice.vercel.app/services/sofa-carpet-cleaning
-- Floor Scrubbing & Buffing: https://r-mcleaningservice.vercel.app/services/floor-scrubbing-polishing
-- Water Tank Cleaning: https://r-mcleaningservice.vercel.app/services/water-tank-cleaning
-- Customer Reviews (4.9★): https://r-mcleaningservice.vercel.app/reviews
-- Contact Page: https://r-mcleaningservice.vercel.app/contact
+- Homepage: https://rmcleaningservice.in/
+- Mohali Cleaning Service: https://rmcleaningservice.in/cleaning-service-in-mohali
+- Zirakpur Cleaning Service: https://rmcleaningservice.in/cleaning-service-in-zirakpur
+- Panchkula Cleaning Service: https://rmcleaningservice.in/cleaning-service-in-panchkula
+- Chandigarh Cleaning Service: https://rmcleaningservice.in/cleaning-service-in-chandigarh
+- Tricity Cleaning Service: https://rmcleaningservice.in/cleaning-service-in-tricity
+- Cleaning Service Near Me: https://rmcleaningservice.in/cleaning-service-near-me
+- Services Catalog: https://rmcleaningservice.in/services
+- Full Home Deep Cleaning: https://rmcleaningservice.in/services/full-home-deep-cleaning
+- Kitchen Deep Cleaning: https://rmcleaningservice.in/services/kitchen-deep-cleaning
+- Bathroom Deep Cleaning: https://rmcleaningservice.in/services/bathroom-deep-cleaning
+- Sofa & Carpet Cleaning: https://rmcleaningservice.in/services/sofa-carpet-cleaning
+- Floor Scrubbing & Buffing: https://rmcleaningservice.in/services/floor-scrubbing-polishing
+- Water Tank Cleaning: https://rmcleaningservice.in/services/water-tank-cleaning
+- Customer Reviews (4.9★): https://rmcleaningservice.in/reviews
+- Contact Page: https://rmcleaningservice.in/contact
