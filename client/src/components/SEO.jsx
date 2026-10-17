@@ -129,7 +129,7 @@ const SEO = ({
     // LocalBusiness / CleaningService Schema with AEO & GEO enhancements
     const localBusinessSchema = {
       '@context': 'https://schema.org',
-      '@type': ['CleaningService', 'LocalBusiness', 'HomeAndConstructionBusiness'],
+      '@type': 'CleaningService',
       '@id': `${SITE_URL}/#business`,
       name: city ? `R M Home Cleaning - ${city}` : 'R M Home Cleaning',
       alternateName: [
