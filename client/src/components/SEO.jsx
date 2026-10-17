@@ -193,13 +193,6 @@ const SEO = ({
           closes: '23:59',
         },
       ],
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '18',
-        bestRating: '5',
-        worstRating: '1',
-      },
       // LLM Knowledge Graph Tags
       knowsAbout: [
         'House Deep Cleaning',
