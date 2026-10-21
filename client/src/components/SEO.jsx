@@ -31,10 +31,12 @@ const SEO = ({
   directAnswer = null,
 }) => {
   useEffect(() => {
-    // 1. Update Title
-    const fullTitle = title
-      ? `${title} | R M Home Cleaning`
-      : 'R M Home Cleaning | 4.9★ House & Deep Cleaning Service in Chandigarh Tricity';
+    // 1. Update Title with exact keyword primacy
+    const fullTitle = !title
+      ? 'Cleaning Service in Chandigarh | #1 House & Deep Cleaning | R M Cleaning'
+      : title.includes('R M Home Cleaning') || title.includes('R M Cleaning')
+      ? title
+      : `${title} | R M Home Cleaning`;
     document.title = fullTitle;
 
     // Helper to set or create meta tags

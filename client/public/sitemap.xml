@@ -4,7 +4,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://rmcleaningservice.in/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -15,8 +15,19 @@
 
   <!-- Top Priority Local SEO Landing Pages -->
   <url>
+    <loc>https://rmcleaningservice.in/cleaning-service-in-chandigarh</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://rmcleaningservice.in/images/living-room-cleaning.jpg</image:loc>
+      <image:title>Cleaning Service in Chandigarh | House &amp; Deep Cleaning</image:title>
+    </image:image>
+  </url>
+
+  <url>
     <loc>https://rmcleaningservice.in/cleaning-service-in-mohali</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
@@ -27,7 +38,7 @@
 
   <url>
     <loc>https://rmcleaningservice.in/cleaning-service-in-zirakpur</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
@@ -38,23 +49,12 @@
 
   <url>
     <loc>https://rmcleaningservice.in/cleaning-service-in-panchkula</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
       <image:loc>https://rmcleaningservice.in/images/living-room-cleaning.jpg</image:loc>
       <image:title>House &amp; Kothi Deep Cleaning in Panchkula MDC</image:title>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://rmcleaningservice.in/cleaning-service-in-chandigarh</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-    <image:image>
-      <image:loc>https://rmcleaningservice.in/images/living-room-cleaning.jpg</image:loc>
-      <image:title>House Cleaning Service in Sector 50 Chandigarh</image:title>
     </image:image>
   </url>
 

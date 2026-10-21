@@ -394,6 +394,124 @@ const LocationLandingPage = ({ defaultSlug }) => {
         </div>
       </section>
 
+      {/* 3.5 SPECIALIZED CLEANING SERVICES & REGIONAL COVERAGE */}
+      <section className="py-20 bg-slate-50 border-b border-skyline-100">
+        <div className="container-x">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <span className="text-skyline-600 font-bold uppercase tracking-wider text-xs">
+              Thorough &amp; Methodical Care
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy-950 mt-1 mb-3">
+              Comprehensive Deep Cleaning Services in {location.city}
+            </h2>
+            <p className="text-sm sm:text-base text-navy-800/70">
+              From compact high-rise apartments to multi-story kothis and villas, our team utilizes commercial machinery and eco-friendly chemicals to ensure every surface is sanitized.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white rounded-2xl p-6 border border-skyline-100 shadow-xs hover:border-skyline-300 transition-all">
+              <div className="h-10 w-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-4">
+                <Sparkles size={20} />
+              </div>
+              <h3 className="font-bold text-navy-950 text-lg mb-2">Modular Kitchen Degreasing</h3>
+              <p className="text-xs sm:text-sm text-navy-800/75 leading-relaxed">
+                Tough grease and oil stains accumulate quickly on kitchen chimneys, exhaust fans, tiled backsplashes, and granite countertops. We use non-abrasive food-safe degreasers to restore sparkle inside and out.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 border border-skyline-100 shadow-xs hover:border-skyline-300 transition-all">
+              <div className="h-10 w-10 rounded-xl bg-skyline-50 text-skyline-600 flex items-center justify-center mb-4">
+                <ShieldCheck size={20} />
+              </div>
+              <h3 className="font-bold text-navy-950 text-lg mb-2">Bathroom Descaling &amp; Sanitization</h3>
+              <p className="text-xs sm:text-sm text-navy-800/75 leading-relaxed">
+                Tricity water hard water leaves stubborn limescale on glass partitions, tiles, and chrome fixtures. Our acid-free descaling techniques safely eliminate scale, mold, and bacteria without damaging grout or fittings.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 border border-skyline-100 shadow-xs hover:border-skyline-300 transition-all">
+              <div className="h-10 w-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-4">
+                <Sparkles size={20} />
+              </div>
+              <h3 className="font-bold text-navy-950 text-lg mb-2">Sofa &amp; Mattress Shampooing</h3>
+              <p className="text-xs sm:text-sm text-navy-800/75 leading-relaxed">
+                Deep injection-extraction shampooing pulls out embedded dust mites, allergens, food stains, and pet dander from fabric, velvet, and leather upholstery, leaving your living room hygienic and refreshed.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 border border-skyline-100 shadow-xs hover:border-skyline-300 transition-all">
+              <div className="h-10 w-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4">
+                <CheckCircle2 size={20} />
+              </div>
+              <h3 className="font-bold text-navy-950 text-lg mb-2">Single-Disc Floor Buffing</h3>
+              <p className="text-xs sm:text-sm text-navy-800/75 leading-relaxed">
+                Mopping alone leaves porous grout dark and tiles dull. Our heavy single-disc rotary scrubbers lift ground-in dirt from Italian marble, terrazzo, granite, and vitrified tiles to revive shine and cleanliness.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 border border-skyline-100 shadow-xs hover:border-skyline-300 transition-all">
+              <div className="h-10 w-10 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center mb-4">
+                <Home size={20} />
+              </div>
+              <h3 className="font-bold text-navy-950 text-lg mb-2">Move-in / Move-out Turnover</h3>
+              <p className="text-xs sm:text-sm text-navy-800/75 leading-relaxed">
+                Handing over keys to a landlord or moving into a newly painted home? We clear paint splatters, sanitize inside wardrobes and kitchen racks, and scrub balconies for a fresh, turn-key handover.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 border border-skyline-100 shadow-xs hover:border-skyline-300 transition-all">
+              <div className="h-10 w-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-4">
+                <Clock size={20} />
+              </div>
+              <h3 className="font-bold text-navy-950 text-lg mb-2">Water Tank Sanitization</h3>
+              <p className="text-xs sm:text-sm text-navy-800/75 leading-relaxed">
+                Overhead Sintex and underground water tanks harbor silt, algae, and bacteria. We de-water, vacuum out sludge, and disinfect tank walls using antibacterial solution to keep your family drinking water clean.
+              </p>
+            </div>
+          </div>
+
+          {/* Special Sector Hubs highlight for Chandigarh */}
+          {location.city === 'Chandigarh' && (
+            <div className="mt-12 p-6 sm:p-8 rounded-2xl bg-white border border-skyline-200/90 shadow-xs">
+              <h3 className="text-xl font-bold text-navy-950 mb-3 flex items-center gap-2">
+                <MapPin size={20} className="text-skyline-600" />
+                Sector-by-Sector Service Hubs Across Chandigarh
+              </h3>
+              <p className="text-xs sm:text-sm text-navy-800/75 mb-6 leading-relaxed">
+                Operating out of our central office at Progressive Society, Sector 50, Chandigarh, our teams are stationed to ensure fast 45 to 60 minute doorstep arrival across all major Chandigarh sectors:
+              </p>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/70">
+                  <p className="font-bold text-navy-950 mb-1">South Chandigarh Hub</p>
+                  <p className="text-navy-800/70 leading-relaxed">
+                    Sector 50 (HQ), Sector 48, 49, 51, 63, 61, 46, 47 society apartments &amp; builder floors.
+                  </p>
+                </div>
+                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/70">
+                  <p className="font-bold text-navy-950 mb-1">Central Hub &amp; Markets</p>
+                  <p className="text-navy-800/70 leading-relaxed">
+                    Sector 34, 35, 43 (ISBT), 44, 22, 17 Plaza, Sector 36, 37, 38, 40, 41, 42.
+                  </p>
+                </div>
+                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/70">
+                  <p className="font-bold text-navy-950 mb-1">North VIP Kothi Belt</p>
+                  <p className="text-navy-800/70 leading-relaxed">
+                    Sector 2, 3, 4, 5, 7, 8, 9, 10, 11 kothis, villas &amp; residences near Sukhna Lake.
+                  </p>
+                </div>
+                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/70">
+                  <p className="font-bold text-navy-950 mb-1">East &amp; IT Belt</p>
+                  <p className="text-navy-800/70 leading-relaxed">
+                    Sector 20, 26, 28, Manimajra MHC, Modern Housing Complex, Rajiv Gandhi IT Park.
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
+
       {/* 4. REVIEWS SECTION WITH BACKGROUND PHOTO */}
       <section className="relative py-20 bg-skyline-50/40 border-b border-skyline-100 overflow-hidden">
         {/* Subtle Ambient Background */}

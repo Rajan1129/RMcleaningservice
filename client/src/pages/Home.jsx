@@ -43,8 +43,8 @@ const Home = () => {
   return (
     <div>
       <SEO
-        title="#1 Cleaning Service in Chandigarh, Mohali, Zirakpur & Panchkula"
-        description="R M Home Cleaning — 4.9★ rated House & Deep Cleaning Service in Sector 50, Chandigarh. Open 24 Hours. Deep cleaning, kitchen, bathroom, sofa & carpet cleaning across Chandigarh, Mohali, Zirakpur, Panchkula & Tricity. Call 096460 78122."
+        title="Cleaning Service in Chandigarh | #1 House & Deep Cleaning | R M Cleaning"
+        description="R M Home Cleaning — 4.9★ rated Cleaning Service in Chandigarh. Located in Sector 50, serving all Sectors 1 to 60, Mohali, Zirakpur & Panchkula. Full home deep cleaning, kitchen degreasing, washroom descaling & sofa cleaning. Open 24 Hours. Call 096460 78122."
         canonical="/"
         faqs={faqsData}
         breadcrumbs={[{ name: 'Home', item: '/' }]}
@@ -76,7 +76,7 @@ const Home = () => {
             </div>
 
             <h1 className="text-4xl sm:text-5xl font-extrabold text-navy-950 leading-[1.12] mb-5 tracking-tight">
-              R M Home Cleaning — House Cleaning Services in Chandigarh
+              Cleaning Service in Chandigarh — Top Rated Deep Home Cleaning
             </h1>
             <p className="text-lg text-navy-800/75 leading-relaxed mb-8 max-w-xl">
               From full home deep cleaning to specialized kitchen degreasing, bathroom descaling, sofa shampooing,
